@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title></title>
+<title>PHYS 2220</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <style>
-
 body {
 	
-	background-image: url('thanksgiving-orig.jpg');
+	background-image: url('physBackground.jpg');
 	background-attachment: fixed;
 	color: #333;
 }
-
 .box {
 	border-radius: 3px;
 	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
 }
-
 .lightbox {
 	zoom: 1.5;
 	position: fixed;
@@ -33,35 +30,29 @@ body {
 	margin: auto;
 	
 }
-
 div.horizontal {
 	display: flex;
 	justify-content: center;
 	height: 100%;
 }
-
 div.vertical {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
 }
-
 ::-webkit-input-placeholder {
    color: #955;
    text-align: center;
 }
-
 ::-moz-placeholder {  
    color: #955;
    text-align: center;
 }
-
 :-ms-input-placeholder {  
    color: #955;
    text-align: center;
 }
-
 </style>
 
 <body>
@@ -70,64 +61,21 @@ div.vertical {
 		<div class="horizontal">
 			<div class="vertical">
 				<div class="box">				
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
+					<a href="ELQ1_2220.html" style="color:white">Module 1</a> <br>
+					<a href="ELQ2_2220.html" style="color:white">Module 2</a> <br>
+					<a href="ELQ3_2220.html" style="color:white">Module 3</a> <br>
+					<a href="ELQ4_2220.html" style="color:white">Module 4</a> <br>
+					<a href="ELQ5_2220.html" style="color:white">Module 5</a> <br>
+					<a href="ELQ6_2220.html" style="color:white">Module 6</a> <br>
+					<a href="ELQ8_2220.html" style="color:white">Module 8</a> <br>
+					<a href="ELQ9_2200.html" style="color:white">Module 9</a> <br>
+					<a href="ELQ10_2200.html" style="color:white">Module 10</a> <br>
+					<a href="ELQ11_2200.html" style="color:white">Module 11</a> <br>
+					<a href="ELQ12_2200.html" style="color:white">Module 12</a> <br>
+					<a href="ELQ13_2200.html" style="color:white">Module 13</a> <br>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	 
-
-	 <script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
-
-	<script type="text/javascript">
-	"use strict";
-
-
-	function loadPage(pwd) {
-		
-		var hash= pwd;
-		hash= Sha1.hash(pwd);
-		var url= hash + "/index.html";
-			
-		$.ajax({
-			url : url,
-			dataType : "html",
-			success : function(data) {
-
-				window.location= url;
-
-			},
-			error : function(xhr, ajaxOptions, thrownError) {
-			
-
-				parent.location.hash= hash;
-
-				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
-			}
-		});
-	}
-
-	 
-	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
-	});
-	$("#password").keypress(function(e) {
-		if (e.which == 13) {
-			
-			loadPage($("#password").val());
-		}
-	});
-	$("#password").focus();
-		
-	</script>
-
 </body>
 </html>
